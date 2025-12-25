@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!-- PARTIE GAUCHE – Formulaire blanc (60%) -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="60"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp"
+            android:gravity="center">
+
+            <!-- En-tête avec flèche retour intégrée Android (existe toujours) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <!-- CETTE ICÔNE EXISTE TOUJOURS SUR TOUS LES ANDROID -->
+
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_logo_edunova"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="eduNova"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A2E"/>
+            </LinearLayout>
+
+            <!-- Tout le reste du formulaire (identique) -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Bienvenue !" android:textSize="26sp" android:textStyle="bold"
+                android:textColor="#1A1A2E" android:layout_marginBottom="8dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Connectez-vous pour continuer" android:textSize="15sp"
+                android:textColor="#666680" android:layout_marginBottom="32dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:boxCornerRadiusTopStart="12dp" app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomEnd="12dp" app:boxCornerRadiusBottomStart="12dp"
+                app:boxStrokeColor="#7B5CFF" app:hintTextColor="#7B5CFF">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:hint="Email" android:inputType="textEmailAddress"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:boxCornerRadiusTopStart="12dp" app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomEnd="12dp" app:boxCornerRadiusBottomStart="12dp"
+                app:boxStrokeColor="#7B5CFF" app:hintTextColor="#7B5CFF"
+                app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:hint="Mot de passe" android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView android:id="@+id/tvForgotPassword"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Mot de passe oublié ?" android:textColor="#7B5CFF"
+                android:textSize="13sp" android:layout_gravity="end"
+                android:layout_marginBottom="24dp"/>
+
+            <Button android:id="@+id/btnLogin"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:text="Se connecter" android:textSize="15sp" android:textStyle="bold"
+                android:textColor="#FFFFFF" android:backgroundTint="#7B5CFF"
+                app:cornerRadius="26dp" android:layout_marginBottom="20dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginVertical="16dp">
+                <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#E0E0E0"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text=" ou " android:textColor="#999999" android:layout_marginHorizontal="12dp"/>
+                <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#E0E0E0"/>
+            </LinearLayout>
+
+            <!-- Google – icône 100% garantie (fournie par Material) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoogle"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:text="Continuer avec Google"
+                app:icon="@drawable/googleg_standard_color_18"
+                app:iconGravity="textStart" app:iconPadding="12dp"
+                app:strokeColor="#DADCE0" app:cornerRadius="26dp"
+                android:layout_marginBottom="32dp"/>
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Pas de compte ? " android:textColor="#666680"/>
+                <TextView android:id="@+id/tvRegister"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="S'inscrire" android:textColor="#7B5CFF" android:textStyle="bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- PARTIE DROITE VIOLETTE – visible même sur téléphone -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="40"
+        android:background="#7B5CFF"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_logo_edunova"
+            app:tint="#FFFFFF"
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reprenez là où\nvous vous êtes\narrêté"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Divers cours, une communauté\nactive, et un apprentissage moderne."
+            android:textColor="#E8E5FF"
+            android:textSize="13sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

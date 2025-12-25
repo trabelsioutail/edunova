@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- En-tête : Logo + eduNova + Bouton Se connecter (sur la même ligne) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:layout_marginTop="40dp">
+
+        <!-- Logo + Nom -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="start|center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_logo_edunova" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="eduNova"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#7B5CFF"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- Bouton Se connecter → VIOLET PLEIN + TEXTE BLANC -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoginTop"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Se connecter"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:backgroundTint="#7B5CFF"
+            app:cornerRadius="30dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingHorizontal="28dp" />
+
+    </LinearLayout>
+
+    <!-- Contenu défilable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plateforme d'apprentissage nouvelle génération"
+                android:textColor="#7B5CFF"
+                android:background="#E8E5FF"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apprenez sans\nlimites avec"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A2E"
+                android:layout_marginTop="48dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="eduNova"
+                android:textSize="56sp"
+                android:textStyle="bold"
+                android:textColor="#7B5CFF"
+                android:layout_marginTop="-12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rejoignez une communauté d'apprenants et découvrez des cours créés par des enseignants. Développez vos compétences à votre rythme, où que vous soyez."
+                android:textSize="16sp"
+                android:textColor="#555577"
+                android:layout_marginTop="24dp"
+                android:lineSpacingExtra="6dp"/>
+
+            <Button
+                android:id="@+id/btnStartLearning"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="Commencer l'apprentissage"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_purple_rounded"
+                android:layout_marginTop="40dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:src="@drawable/home_illustration"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/rounded_corners_white"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">EduNova</string>
+
+    <!-- Login -->
+    <string name="edunova_title">EduNova</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Mot de passe</string>
+    <string name="login_button">Se connecter</string>
+    <string name="no_account">Pas de compte ? S\'inscrire</string>
+    <string name="google_signin">Se connecter avec Google</string>
+
+    <!-- Register -->
+    <string name="register_title">Créer un compte EduNova</string>
+    <string name="first_name_hint">Prénom</string>
+    <string name="last_name_hint">Nom</string>
+    <string name="confirm_password_hint">Confirmer mot de passe</string>
+    <string name="register_button">S\'inscrire</string>
+    <string name="has_account">Déjà un compte ? Se connecter</string>
+
+    <!-- Présentation -->
+    <string name="tagline">Plateforme de e-learning moderne</string>
+    <string name="stats">+1000 cours\n50k+ étudiants\nCommunauté active</string>
+</resources>
